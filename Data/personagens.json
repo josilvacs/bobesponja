@@ -1,0 +1,57 @@
+[
+    {
+        "Nome": "Bob Esponja",
+        "Descricao": "Bob Esponja é o protagonista do seriado.",
+        "Especie": "Esponja do mar",
+        "Pecado": "Luxúria",
+        "Imagem": "\\img\\001.png"
+    },
+    {
+        "Nome": "Patrick Estrela",
+        "Descricao": "Patrick é uma estrela-do-mar que é o maior amigo do Bob Esponja.",
+        "Especie": "Estrela do mar",
+        "Pecado": "Preguiça",
+        "Teoria": "Patrick Estrela foi feito para representar o seu desejo de um amigo real. Ele também foi feito porque ele sempre quis ter um amigo que fosse mais burro do que ele para ajudá-lo a se sentir melhor sobre seu retardamento mental.",
+        "Imagem": "\\img\\002.png"
+    },
+    {
+        "Nome": "Lula Molusco",
+        "Descricao": "Lula Molusco é o antipatico vizinho do Bob, apesar do nome Lula é um polvo.",
+        "Especie": "Polvo",
+        "Pecado": "Ira",
+        "Teoria": "Lula Molusco foi feito para representar os valentões que faziam diversão dele. O amor de Bob Esponja por Lula Molusco representa todas as vezes que ele tentou fazer amizade com os valentões, nunca conseguindo.",
+        "Imagem": "\\img\\003.png"
+    },
+    {
+        "Nome": "Seu Sirigueijo",
+        "Descricao": "Sr. Sirigueijo é o dono do Siri Cascudo, bem como o empregador ambos de Bob e Lula Molusco.",
+        "Especie": "Crangueijo",
+        "Pecado": "Avareza",
+        "Teoria": "Sr. Siriguejo foi feito para representar todos os momentos em que os agressores fingiam ser seus amigos e aproveitando a sua estupidez.",
+        "Imagem": "\\img\\004.png"
+    },
+    {
+        "Nome": "Gary Caracol",
+        "Descricao": "Gary é o caracol de estimação do Bob Esponja.",
+        "Especie": "Caramujo do mar",
+        "Pecado": "Gula",
+        "Teoria": "Gary foi feito para representar seus pais, que tinham de viver e cuidar dele.",
+        "Imagem": "\\img\\005.png"
+    },
+    {
+        "Nome": "Sandy Bochechas",
+        "Descricao": "Sandy é um esquilo que vem do Texas e mora na Fenda do Biquíni.",
+        "Especie": "Esquilo",
+        "Pecado": "Soberba",
+        "Teoria": "Sandy foi feita para representar o seu amor pela garota mais popular da escola e de seu sonho de que ela o amasse de volta.",
+        "Imagem": "\\img\\006.png"
+    },
+    {
+        "Nome": "Plankton",
+        "Descricao": "Plankton é um dos proprietários do Balde de Lixo. Plankton é o maior rival de Sr. Sirigueijo.",
+        "Especie": "Crustáceos",
+        "Pecado": "Inveja",
+        "Teoria": "Plankton foi feito para representar a sua irmã mais velha, que estava sempre o incomodando e tirando sarro dele, coisas que levaram a sua morte.",
+        "Imagem": "\\img\\007.png"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+      "Nome": "Esponja do mar",
+      "Cor": "#"
+    },
+    {
+      "Nome": "Estrela do mar",
+      "Cor": "#39f"
+    },
+    {
+      "Nome": "Polvo",
+      "Cor": "#76e"
+    },
+    {
+      "Nome": "Carangueijo",
+      "Cor": "#fc3"
+    },
+    {
+      "Nome": "Caramujo",
+      "Cor": "#e9e"
+    },
+    {
+      "Nome": "Esquilo",
+      "Cor": "#66b"
+    },
+    {
+        "Nome": "Crustáceos",
+        "Cor": "#66b"
+    }
+]
