@@ -1,42 +1,85 @@
 using System.Text.Json;
-using Pokedex.Models;
+using bobesponja.Models;
 
-namespace Pokedex.Services;
-    public class PokeService : IBobService
+namespace bobesponja.Service;
+
+public class BobService : IBobService
+{
+    private readonly IHttpContextAccessor _session;
+    private readonly string personagemFile = @"Data\personagens.json";
+    private readonly string especieFile = @"Data\tipos.json";
+
+    public BobService(IHttpContextAccessor session)
+    {
+        _session = session;
+        PopularSessao();
+    }
+
+    public List<Personagem> GetPersonagens()
+    {
+        PopularSessao();
+        var personagens = JsonSerializer.Deserialize<List<Personagem>>(_session.HttpContext.Session.GetString("Personagens"));
+        return personagens;
+    }
+
+    public List<Especie> GetEspecies()
+    {
+        PopularSessao();
+        var especie = JsonSerializer.Deserialize<List<Especie>>(_session.HttpContext.Session.GetString("Especies"));
+        return especie;
+    }
+
+    public Personagem GetPersonagem(string Nome)
+    {
+        var personagens = GetPersonagens();
+        return personagens.Where(p => p.Nome.Equals(Nome)).FirstOrDefault();
+    }
+
+    public BobEsponjaDto GetBobEsponja()
+    {
+        var bobs = new BobEsponjaDto()
         {
-            private readonly IHttpContextAccessor _session;
-            private readonly string personagemFile = @"Data\personagens.json";
-            private readonly string especieFile = @"Data\tipos.json";
-            public BobService(IHttpContextAccessor session)
-        {
-            _session = session;
-            PopularSessao();
-        }
-            public List<Personagem> GetPersonagens()
-        {
-            PopularSessao();
-            var personagens = JsonSerializer.Deserialize<List<Personagem>>
-            (_session.HttpContext.Session.GetString("Personagens"));
-            return personagens;
-        }
-            public List<Tipo> GetTipos()
-        {
-            PopularSessao();
-            var tipos = JsonSerializer.Deserialize<List<Tipo>>
-            (_session.HttpContext.Session.GetString("Tipos"));
-            return tipos;
-        }
-            public Pokemon GetPokemon(int Numero)
-        {
-            var pokemons = GetPokemons();
-            return pokemons.Where(p => p.Numero == Numero).FirstOrDefault();
-        }
-            public PokedexDto GetPokedexDto()
-        {
-            var pokes = new PokedexDto()
-        {
-            Pokemons = GetPokemons(),
-            Tipos = GetTipos()
+            Personagens = GetPersonagens(),
+            Especies = GetEspecies()
         };
-            return pokes;
+        return bobs;
+    }
+
+    public DetailsDto GetDetailedPersonagem(string Nome)
+    {
+        var personagens = GetPersonagens().ToArray();
+        var personagem = GetPersonagem(Nome);
+        int posicao = Array.IndexOf(personagens, personagem);
+        var bob = new DetailsDto()
+        {
+            Current = personagem,
+            Prior = posicao - 1 < 0 ? null : personagens[posicao-1],
+            Next = posicao + 1 >=  personagens.Count() ? null : personagens[posicao+1]
+        };
+        return bob;
+    }
+
+    public Especie GetEspecie(string Nome)
+    {
+        var especies = GetEspecies();
+        return especies.Where(e => e.Nome.Equals(Nome)).FirstOrDefault();
+    }
+
+    private void PopularSessao()
+    {
+        if (string.IsNullOrEmpty(_session.HttpContext.Session.GetString("Especies")))
+        {
+            _session.HttpContext.Session.SetString("Personagens", LerArquivo(personagemFile));
+            _session.HttpContext.Session.SetString("Especies", LerArquivo(especieFile));
+        }
+    }
+
+    private string LerArquivo(string fileName)
+    {
+        using (StreamReader leitor = new StreamReader(fileName))
+        {
+            string dados = leitor.ReadToEnd();
+            return dados;
+        }
+    }
 }

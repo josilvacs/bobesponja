@@ -1,12 +1,10 @@
-namespace Bobesponja.Models;
+namespace bobesponja.Models;
 
+public class Especie
 {
-    public class Tipo
-    {
-        // Atributos
-        public string Nome { get; set; }
-        public string Cor { get; set; }
-    }
-    
-    
+    // Atributos
+    public string Nome { get; set; }
+    public string Cor { get; set; }
 }
+
+

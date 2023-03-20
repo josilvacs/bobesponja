@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\etec\\desktop\\Bobesponja\\Bobesponja.csproj": {}
+    "C:\\Users\\etec\\Desktop\\bobesponja\\Bobesponja.csproj": {}
   },
   "projects": {
-    "C:\\Users\\etec\\desktop\\Bobesponja\\Bobesponja.csproj": {
+    "C:\\Users\\etec\\Desktop\\bobesponja\\Bobesponja.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\etec\\desktop\\Bobesponja\\Bobesponja.csproj",
+        "projectUniqueName": "C:\\Users\\etec\\Desktop\\bobesponja\\Bobesponja.csproj",
         "projectName": "Bobesponja",
-        "projectPath": "C:\\Users\\etec\\desktop\\Bobesponja\\Bobesponja.csproj",
+        "projectPath": "C:\\Users\\etec\\Desktop\\bobesponja\\Bobesponja.csproj",
         "packagesPath": "C:\\Users\\etec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\etec\\desktop\\Bobesponja\\obj\\",
+        "outputPath": "C:\\Users\\etec\\Desktop\\bobesponja\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\etec\\AppData\\Roaming\\NuGet\\NuGet.Config",

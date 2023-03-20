@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using bobesponja.Models;
 
 namespace bobesponja.Service
 {
@@ -9,9 +6,9 @@ namespace bobesponja.Service
     {
         List<Personagem> GetPersonagens();
         List<Especie> GetEspecies();
-        PersonagemDto GetPersonagemDto();
-        DetailsDto GetDetailedPersonagem (int Numero);
+        Personagem GetPersonagem(string Nome);
+        BobEsponjaDto GetBobEsponja();
+        DetailsDto GetDetailedPersonagem(string Nome);
         Especie GetEspecie(string Nome);
-
     }
 }
