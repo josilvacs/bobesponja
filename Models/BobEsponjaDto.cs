@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace bobesponja.Models;
 
 public class BobEsponjaDto

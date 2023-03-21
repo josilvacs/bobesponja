@@ -8,24 +8,24 @@ namespace Bobesponja.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    private readonly IBobService _BobService;
+    private readonly IBobService _bobService;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger , IBobService bobService)
     {
         _logger = logger;
         _bobService = bobService;
     }
 
-    public IActionResult Index(string tipo)
+    public IActionResult Index(string especie)
     {
-        var pokes = _pokeService.GetPokedexDto();
-        ViewData["filter"] = string.IsNullOrEmpty(tipo) ? "all" : tipo;
-        return View(pokes);
+        var bob = _bobService.GetBobEsponja();
+        ViewData["filter"] = string.IsNullOrEmpty(especie) ? "all" : especie;
+        return View(bob);
     }
-    public IActionResult Details(int Numero)
+    public IActionResult Details(string Nome)
     {
-    var pokemon = _pokeService.GetDetailedPokemon(Numero);
-    return View(pokemon);
+    var personagem = _bobService.GetDetailedPersonagem(Nome);
+    return View(personagem);
     }
     public IActionResult Privacy()
     {
