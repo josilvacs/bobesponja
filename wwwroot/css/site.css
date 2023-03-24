@@ -1,19 +1,49 @@
 html {
-  font-size: 14px;
+    overflow-y: scroll;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
+.navbar {
+  background-color: #7bd3ed
+}
+
+.album {
+  
+}
+
+.card img {
+    background-color: #7bd3ed;
+}
+
+.card:hover {
+    border: 3px solid #7bd3ed;
+    transform: scale(1.15);
+    transition: 1s;
+    z-index: 1000;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
   }
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;;
-}
-
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #7bd3ed;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7bd3ed; 
+  }
