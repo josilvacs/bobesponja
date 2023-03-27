@@ -3,11 +3,15 @@ html {
 }
 
 .navbar {
-  background-color: #7bd3ed
+  background-color: #7bd3ed;
 }
 
 .album {
-  
+  background-color: #ffe600;
+}
+
+main {
+  background-color: #007bff;
 }
 
 .card img {
@@ -21,8 +25,16 @@ html {
     z-index: 1000;
 }
 
+footer{
+  background-color: #7bd3ed;
+}
+
 .cursor-pointer {
     cursor: pointer;
+}
+
+.path {
+  color: #ffe600;
 }
 
 /* scroll bar */
